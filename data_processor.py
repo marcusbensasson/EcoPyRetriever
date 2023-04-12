@@ -32,14 +32,21 @@ class DataProcessor:
 
         return data
 
-    def save_data_to_csv(self, data, file_name):
+    def save_data(self, data, file_name, file_format):
         """
-        Save the processed data to a CSV file with the specified file name.
+        Save the processed data to a file with the specified file name and format.
         
         :param data: DataFrame containing the processed data
-        :param file_name: String with the desired file name (without the .csv extension)
+        :param file_name: String with the desired file name (without the extension)
+        :param file_format: String with the desired file format ('excel' or 'csv')
         """
-        downloads_folder = os.path.expanduser('~/Downloads')
-        file_path = os.path.join(downloads_folder, f"{file_name}.csv")
-        data.to_csv(file_path)
+        if file_format == 'excel':
+            file_path = os.path.join(os.path.expanduser('~'), 'Downloads', f"{file_name}.xlsx")
+            data.to_excel(file_path)
+        elif file_format == 'csv':
+            file_path = os.path.join(os.path.expanduser('~'), 'Downloads', f"{file_name}.csv")
+            data.to_csv(file_path)
+        else:
+            raise ValueError("Invalid file format. Please choose 'excel' or 'csv'.")
+
         print(f"Data saved to {file_path}")
