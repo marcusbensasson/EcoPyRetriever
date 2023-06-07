@@ -1,3 +1,5 @@
+import json
+
 """
 Utility functions for user input prompts and other miscellaneous tasks.
 """
@@ -50,3 +52,24 @@ def prompt_for_output_format():
                 print(f"Invalid input. Please enter a number from 1 to {len(options)}")
         except ValueError:
             print("Invalid input. Please enter a number.")
+
+def save_dict_to_file(dict_obj, file_path):
+    """
+    Save a dictionary object to a JSON file.
+    
+    :param dict_obj: The dictionary object to save
+    :param file_path: The path of the file to save the dictionary to
+    """
+    with open(file_path, 'w') as file:
+        json.dump(dict_obj, file, ensure_ascii=False, indent=4)
+
+def load_dict_from_file(file_path):
+    """
+    Load a dictionary object from a JSON file.
+    
+    :param file_path: The path of the file to load the dictionary from
+    :return: The loaded dictionary object
+    """
+    with open(file_path, 'r') as file:
+        dict_obj = json.load(file)
+    return dict_obj

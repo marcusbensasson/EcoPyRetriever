@@ -48,19 +48,11 @@ class EurostatQueryManager:
         selectedQuery = self.queries[choice - 1]['query_string']
         return selectedIndicator, selectedQuery 
     
-    def getDatasetAsDataFrame(self, client):
-        """
-        Retrieve the dataset from the Eurostat API using the selected query and convert it to a DataFrame.
-        """
-        selected_indicator, selected_query_string = self.selectQuery()
-        query = client.get_dataset(selected_indicator, params=selected_query_string)
-        return query.to_dataframe()
-    
     def fetch_data(self, client):
         """
         Retrieve the dataset from the Eurostat API using the selected query and convert it to a DataFrame.
         Return the DataFrame and the selected indicator.
         """
         selected_indicator, selected_query_string = self.selectQuery()
-        query = client.get_dataset(selected_indicator, params=selected_query_string)
-        return query.to_dataframe(), selected_indicator
+        query = client.get_dataset(selected_indicator, params=selected_query_string)     
+        return query.to_dataframe(), selected_indicator, selected_query_string
