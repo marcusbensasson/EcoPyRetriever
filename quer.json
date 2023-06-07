@@ -1,0 +1,131 @@
+[
+    {
+      "query_name": "just_greece",
+      "query_code": "prc_hicp_manr",
+      "query_string": {
+        "geo": "EL",
+        "coicop": "CP00",
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "greece_and_spain",
+      "query_code": "prc_hicp_manr",
+      "query_string": {
+        "geo": ["EL", "ES"],
+        "coicop": "CP00",
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "spain_italy",
+      "query_code": "prc_hicp_manr",
+      "query_string": {
+        "geo": ["ES", "IT"],
+        "coicop": "CP00",
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "greece_vs_ez",
+      "query_code": "prc_hicp_manr",
+      "query_string": {
+        "geo": ["EL", "EA"],
+        "coicop": ["CP00", "FOOD", "SERV", "GD", "TOT_X_NRG_FOOD", "NRG"],
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "greek services inflation",
+      "query_code": "prc_hicp_manr",
+      "query_string": {
+        "geo": ["EL"],
+        "coicop": ["SERV", "SERV_COM", "SERV_HOUS", "SERV_MSC", "SERV_REC", "SERV_REC_X_HOA", "SERV_REC_HOA", "SERV_TRA"],
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "club_med",
+      "query_code": "prc_hicp_manr",
+      "query_string": {
+        "geo": ["EL","ES", "IT"],
+        "coicop": "CP00",
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "gdp_prototype",
+      "query_code": "nama_10_gdp",
+      "query_string": {
+        "geo": "EL",
+        "sinceTimePeriod": "2001",
+        "na_item": ["B1GQ", "P3", "P3_S13"],
+        "unit": ["CP_MEUR","CLV15_MEUR"]
+      }
+    },
+    {
+      "query_name": "greek unemployment",
+      "query_code": "UNE_RT_M",
+      "query_string": {
+        "geo": ["EL", "EA20"],
+        "sinceTimePeriod": "2001-01",
+        "s_adj": "SA",
+        "unit": "PC_ACT",
+        "sex": "T",
+        "age": "TOTAL"
+      }
+    },
+    {
+      "query_name": "imports regression",
+      "query_code": "nama_10_gdp",
+      "query_string": {
+        "geo": "EL",
+        "sinceTimePeriod": "2001",
+        "na_item": ["B1GQ", "P6", "P7"],
+        "unit": ["PD15_EUR", "CLV_I15", "CLV15_MEUR"]
+      }
+    },
+    {
+      "query_name": "inflation breakdown",
+      "query_code": "prc_hicp_midx",
+      "query_string": {
+        "geo": "EL",
+        "coicop": ["CP00", "FOOD", "TOT_X_NRG_FOOD", "NRG"],
+        "sinceTimePeriod": "2010-01"
+      }
+    },
+    {
+      "query_name": "greek employment",
+      "query_code": "LFSQ_EGAN2",
+      "query_string": {
+        "geo": ["EL"],
+        "age": "Y15-64",
+        "sex": "T",
+        "nace_r2": ["TOTAL", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U"],
+        "sinceTimePeriod": "2001-Q1"
+      }
+    },
+    {
+      "query_name": "govt finances",
+      "query_code": "GOV_10A_MAIN",
+      "query_string": {
+        "geo": "EL",
+        "sinceTimePeriod": "2003",
+        "na_item": ["TE", "TR", "D41PAY", "B9"],
+        "unit": "MIO_EUR",
+        "sector": "S13"
+      }
+    },
+    {
+      "query_name": "quarterly gdp",
+      "query_code": "namq_10_gdp",
+      "query_string": {
+        "geo": "EL",
+        "sinceTimePeriod": "2001-01",
+        "na_item": ["B1GQ", "P3", "P3_S13"],
+        "unit": ["CP_MEUR","CLV15_MEUR"]
+      }
+    }
+ 
+  ]
+  
