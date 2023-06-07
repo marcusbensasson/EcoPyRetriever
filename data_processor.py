@@ -69,6 +69,8 @@ class DataProcessor:
         :param file_name: String with the desired file name (without the extension)
         :param file_format: String with the desired file format ('excel' or 'csv')
         """
+        data = data.T
+
         if file_format == 'excel':
             file_path = os.path.join(os.path.expanduser('~'), 'Downloads', f"{file_name}.xlsx")
             data.to_excel(file_path)
