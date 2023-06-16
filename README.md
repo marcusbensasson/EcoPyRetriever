@@ -1,6 +1,6 @@
 # EcoPyExplorer
 
-EcoPyExplorer is a Python tool designed to fetch, process, and export data from the Eurostat API. The tool allows users to select a predefined query from a JSON file, retrieve the relevant data, and save the results as a CSV file.
+EcoPyExplorer is a Python tool designed to fetch, process, and export data from the Eurostat API. The tool allows users to select a predefined query from a JSON file, retrieve the relevant data, and save the results as a CSV file. This programme is not so great for browsing Eurostat data (a better name for it would be EcoPyRetriever). Rather, if you have a dataset that you use regularly, this is a quicker way of retrieving it each time.
 
 ## Features
 
